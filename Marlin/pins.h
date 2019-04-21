@@ -264,6 +264,12 @@
 #elif MB(5DPRINT)
   #include "pins_5DPRINT.h"           // AT90USB1286                                ?env:at90USB1286_DFU
 
+//
+// Sweet Shack Candy Printer
+//
+#elif MB(CANDY_PRINTER)
+  #include "pins_CANDY_PRINTER.h"
+
 #else
   #error "Unknown MOTHERBOARD value set in Configuration.h"
 #endif
