@@ -268,7 +268,9 @@
 /**
  * Temp Sensor defines
  */
-#if TEMP_SENSOR_0 == -4
+#if TEMP_SENSOR_0 == -5
+  #define HEATER_0_USES_LM35
+#elif TEMP_SENSOR_0 == -4
   #define HEATER_0_USES_AD8495
 #elif TEMP_SENSOR_0 == -3
   #define HEATER_0_USES_MAX6675

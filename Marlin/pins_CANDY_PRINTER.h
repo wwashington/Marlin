@@ -191,9 +191,9 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN         13   // Analog Input
-#define TEMP_1_PIN         15   // Analog Input
-#define TEMP_BED_PIN       14   // Analog Input
+#define TEMP_0_PIN          0   // Analog Input
+#define TEMP_1_PIN         -1   // Analog Input
+#define TEMP_BED_PIN       -1   // Analog Input
 
 // SPI for Max6675 or Max31855 Thermocouple
 #if DISABLED(SDSUPPORT)
@@ -235,7 +235,8 @@
   #define RAMPS_D10_PIN    10
 #endif
 
-#define HEATER_0_PIN       RAMPS_D10_PIN
+// #define HEATER_0_PIN       RAMPS_D10_PIN
+#define HEATER_0_PIN       12
 
 #if ENABLED(IS_RAMPS_EFB)                      // Hotend, Fan, Bed
   #define HEATER_BED_PIN   RAMPS_D8_PIN
