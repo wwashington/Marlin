@@ -69,14 +69,14 @@
 //
 // Limit Switches
 //
-#define X_MIN_PIN           -1
+#define X_MIN_PIN           25
 #ifndef X_MAX_PIN
-  #define X_MAX_PIN         -1
+  #define X_MAX_PIN         24
 #endif
-#define Y_MIN_PIN          -1
-#define Y_MAX_PIN          -1
-#define Z_MIN_PIN          -1
-#define Z_MAX_PIN          -1
+#define Y_MIN_PIN          22
+#define Y_MAX_PIN          23
+#define Z_MIN_PIN          27
+#define Z_MAX_PIN          26
 
 //
 // Z Probe (when not Z_MIN_PIN)
@@ -111,7 +111,7 @@
 
 #define E0_STEP_PIN        2
 #define E0_DIR_PIN         3
-#define E0_ENABLE_PIN      24
+#define E0_ENABLE_PIN      30
 #ifndef E0_CS_PIN
   #define E0_CS_PIN        42
 #endif
@@ -378,12 +378,12 @@
         // DOGM SPI LCD Support
         #define DOGLCD_CS       16
         #define DOGLCD_MOSI     17
-        #define DOGLCD_SCK      23
+        #define DOGLCD_SCK      -1
         #define DOGLCD_A0       LCD_PINS_DC
       #else
         #define LCD_PINS_RS     16
         #define LCD_PINS_ENABLE 17
-        #define LCD_PINS_D4     23
+        #define LCD_PINS_D4     -1
         #define LCD_PINS_D5     25
         #define LCD_PINS_D6     27
       #endif
@@ -418,7 +418,7 @@
 
       #if ENABLED(CR10_STOCKDISPLAY)
         #define BTN_EN1         17
-        #define BTN_EN2         23
+        #define BTN_EN2         -1
       #else
         #define BTN_EN1         31
         #define BTN_EN2         33
@@ -449,7 +449,7 @@
 
     #elif ENABLED(LCD_I2C_VIKI)
 
-      #define BTN_EN1           22   // http://files.panucatt.com/datasheets/viki_wiring_diagram.pdf explains 40/42.
+      #define BTN_EN1           -1   // http://files.panucatt.com/datasheets/viki_wiring_diagram.pdf explains 40/42.
       #define BTN_EN2            7   // 22/7 are unused on RAMPS_14. 22 is unused and 7 the SERVO0_PIN on RAMPS_13.
       #define BTN_ENC           -1
 
@@ -466,7 +466,7 @@
       #define STAT_LED_RED_PIN  32
       #define STAT_LED_BLUE_PIN 35
 
-      #define BTN_EN1           22
+      #define BTN_EN1           -1
       #define BTN_EN2            7
       #define BTN_ENC           39
 
@@ -478,7 +478,7 @@
       #define DOGLCD_CS         29
       #define DOGLCD_A0         27
 
-      #define BEEPER_PIN        23
+      #define BEEPER_PIN        -1
       #define LCD_BACKLIGHT_PIN 33
 
       #define BTN_EN1           35
