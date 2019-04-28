@@ -459,7 +459,7 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 170
+#define EXTRUDE_MINTEMP 30
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -613,22 +613,23 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 400 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+//#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 100, 100, 25, 2 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
  * (Maximum start speed for accelerated moves)
- * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 500, 10000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -905,7 +906,7 @@
  */
 
 // Min software endstops constrain movement within minimum coordinate bounds
-//#define MIN_SOFTWARE_ENDSTOPS
+#define MIN_SOFTWARE_ENDSTOPS
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
@@ -913,7 +914,7 @@
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
-//#define MAX_SOFTWARE_ENDSTOPS
+#define MAX_SOFTWARE_ENDSTOPS
 #if ENABLED(MAX_SOFTWARE_ENDSTOPS)
   #define MAX_SOFTWARE_ENDSTOP_X
   #define MAX_SOFTWARE_ENDSTOP_Y
