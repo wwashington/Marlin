@@ -622,14 +622,15 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
-#define DEFAULT_MAX_FEEDRATE          { 100, 100, 25, 2 }
+#define DEFAULT_MAX_FEEDRATE          { 5, 5, 5, 2 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
  * (Maximum start speed for accelerated moves)
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 500, 10000 }
+//#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 500, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3, 3, 1, 100 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
